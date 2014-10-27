@@ -1,0 +1,21 @@
+# # Dependencies
+# markdown:         redcarpet
+# highlighter:      pygments
+
+# Permalinks
+permalink:        pretty
+relative_permalinks: true
+
+# Setup
+title:            Ryan Slama Web Design
+tagline:          
+url:              http://getpoole.com
+baseurl:          /
+author:
+  name:           Ryan Slama
+  url:            https://ryanslama.com/
+  email:          slama@outlook.com
+
+# Custom vars
+version:          0.0.1
+

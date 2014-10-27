@@ -1,0 +1,543 @@
+/*
+ *                        ___
+ *                       /\_ \
+ *  _____     ___     ___\//\ \      __
+ * /\ '__`\  / __`\  / __`\\ \ \   /'__`\
+ * \ \ \_\ \/\ \_\ \/\ \_\ \\_\ \_/\  __/
+ *  \ \ ,__/\ \____/\ \____//\____\ \____\
+ *   \ \ \/  \/___/  \/___/ \/____/\/____/
+ *    \ \_\
+ *     \/_/
+ *
+ * Designed, built, and released under MIT license by @mdo. Learn more at
+ * https://github.com/poole/poole.
+ */
+
+
+/*
+ * Contents
+ *
+ * Body resets
+ * Custom type
+ * Messages
+ * Container
+ * Masthead
+ * Posts and pages
+ * Pagination
+ * Reverse layout
+ * Themes
+ */
+
+
+/*
+ * Body resets
+ *
+ * Update the foundational and global aspects of the page.
+ */
+
+* {
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-family: "Source Sans Pro", sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+}
+@media (min-width: 38em) {
+  html {
+    font-size: 18px;
+  }
+  #cta1 {
+    float:right;
+    margin: 10px 0 10px 10px;
+  }
+}
+
+body {
+  color: #222;
+  background-color: #fff;
+  -webkit-text-size-adjust: 100%;
+      -ms-text-size-adjust: 100%;
+}
+
+/* No `:visited` state is required by default (browsers will use `a`) */
+a {
+  color: #008585;
+  text-decoration: none;
+  border-bottom: 1px solid rgba(91, 120, 120, 0.5);
+  -webkit-transition: all .1s ease-in-out;
+  -moz-transition: all .1s ease-in-out;
+  transition: all .1s ease-in-out;
+}
+}
+a strong {
+  color: inherit;
+}
+/* `:focus` is linked to `:hover` for basic accessibility */
+a:hover,
+a:focus {
+  border-bottom: 1px solid rgb(91, 120, 120);
+}
+
+/* Headings */
+h1, h2, h3, h4, h5, h6 {
+  margin-bottom: 10px;
+  padding-top: 20px;
+  font-weight: bold;
+  line-height: 1.25;
+  color: #303030;
+  text-rendering: optimizeLegibility;
+}
+h1 {
+  font-size: 40px;
+}
+h2 {
+  margin-top: 20px;
+  font-size: 30px;
+}
+h3 {
+  margin-top: 20px;
+  font-size: 32px;
+}
+h4, h5, h6 {
+  margin-top: 10px;
+  font-size: 20px;
+}
+
+/* Body text */
+p {
+  margin-top: 0;
+  margin-bottom: 20px;
+}
+
+strong {
+  color: #303030;
+  font-weight: 600;
+}
+
+
+/* Lists */
+ul, ol, dl {
+  margin-top: 0;
+  margin-bottom: 20px;
+}
+
+dt {
+  font-weight: bold;
+}
+dd {
+  margin-bottom: 10px;
+}
+
+/* Misc */
+hr {
+  position: relative;
+  margin: 30px 0;
+  border: 0;
+  border-top: 1px solid #eee;
+  border-bottom: 1px solid #fff;
+}
+
+abbr {
+  font-size: 85%;
+  font-weight: bold;
+  color: #555;
+  text-transform: uppercase;
+}
+abbr[title] {
+  cursor: help;
+  border-bottom: 1px dotted #e5e5e5;
+}
+
+/* Code */
+code,
+pre {
+  font-family: Menlo, Monaco, "Courier New", monospace;
+}
+code {
+  padding: .25em .5em;
+  font-size: 85%;
+  color: #bf616a;
+  background-color: #f9f9f9;
+  border-radius: 3px;
+}
+pre {
+  display: block;
+  margin-top: 0;
+  margin-bottom: 20px;
+  padding: 20px;
+  font-size: 18px;
+  line-height: 1.4;
+  white-space: pre;
+  white-space: pre-wrap;
+  word-break: break-all;
+  word-wrap: break-word;
+  background-color: #f9f9f9;
+}
+pre code {
+  padding: 0;
+  font-size: 100%;
+  color: inherit;
+  background-color: transparent;
+}
+
+/* Pygments via Jekyll */
+.highlight {
+  margin-bottom: 20px;
+  border-radius: 4px;
+}
+.highlight pre {
+  margin-bottom: 0;
+}
+
+/* Gist via GitHub Pages */
+.gist .gist-file {
+  font-family: Menlo, Monaco, "Courier New", monospace !important;
+}
+.gist .markdown-body {
+  padding: 15px;
+}
+.gist pre {
+  padding: 0;
+  background-color: transparent;
+}
+.gist .gist-file .gist-data {
+  font-size: 18px !important;
+  line-height: 1.4;
+}
+.gist code {
+  padding: 0;
+  color: inherit;
+  background-color: transparent;
+  border-radius: 0;
+}
+
+/* Quotes */
+blockquote {
+  padding: 10px 20px;
+  margin: 18px 0;
+  color: #7a7a7a;
+  border-left: 5px solid #e5e5e5;
+}
+blockquote p:last-child {
+  margin-bottom: 0;
+}
+@media (min-width: 30em) {
+  blockquote {
+    padding-right: 100px;
+    padding-left: 15px;
+  }
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  margin: 0 0 20px;
+  border-radius: 5px;
+}
+
+/* Tables */
+table {
+  margin-bottom: 20px;
+  width: 100%;
+  border: 1px solid #e5e5e5;
+  border-collapse: collapse;
+}
+td,
+th {
+  padding: 5px 10px;
+  border: 1px solid #e5e5e5;
+}
+tbody tr:nth-child(odd) td,
+tbody tr:nth-child(odd) th {
+  background-color: #f9f9f9;
+}
+
+
+/*
+ * Custom type
+ *
+ * Extend paragraphs with `.lead` for larger introductory text.
+ */
+
+.lead {
+  font-size: 24px;
+  font-weight: 300;
+}
+
+
+/*
+ * Messages
+ *
+ * Show alert messages to users. You may add it to single elements like a `<p>`,
+ * or to a parent if there are multiple elements to show.
+ */
+
+.message {
+  margin-bottom: 20px;
+  padding: 20px;
+  color: #717171;
+  background-color: #f9f9f9;
+}
+
+
+/*
+ * Container
+ *
+ * Center the page content.
+ */
+
+.container {
+  max-width: 760px;
+  padding-left:  20px;
+  padding-right: 20px;
+  margin-left:  auto;
+  margin-right: auto;
+}
+
+
+/*
+ * Masthead
+ *
+ */
+
+header {
+  height: 448px;
+  width: 100%;
+  background: url(../bg2.jpg) center/ cover;
+}
+
+#centerfix {
+  margin-left: -2px;
+}
+
+#title {
+  padding-top:80px;
+  margin-top: 0;
+  font-weight: 600;
+  font-size: 60px;
+  margin-bottom:10px;
+  text-transform: uppercase;
+}
+#subtitle {
+  font-size: 36px;
+  font-weight: 300;
+  margin: 0;
+}
+
+#title, #subtitle {
+  text-align: center;
+  color: white;
+  text-shadow: 0px 0px 10px black;
+}
+/*
+ * Posts and pages
+ *
+ * Each post is wrapped in `.post` and is used on default and post layouts. Each
+ * page is wrapped in `.page` and is only used on the page layout.
+ */
+
+.page,
+.post {
+  margin-bottom: 4em;
+}
+
+/* Blog post or page title */
+.page-title,
+.post-title,
+.post-title a {
+  color: #303030;
+  border: none;
+}
+.page-title,
+.post-title {
+  margin-top: 0;
+}
+
+/* Meta data line below post title */
+.post-date {
+  display: block;
+  margin-top: -10px;
+  margin-bottom: 20px;
+  color: #9a9a9a;
+}
+
+/* Related posts */
+.related {
+  padding-top: 40px;
+  padding-bottom: 40px;
+  border-top: 1px solid #eee;
+}
+.related-posts {
+  padding-left: 0;
+  list-style: none;
+}
+.related-posts h3 {
+  margin-top: 0;
+}
+.related-posts li small {
+  font-size: 75%;
+  color: #999;
+}
+.related-posts li a:hover {
+  color: #268bd2;
+  text-decoration: none;
+}
+.related-posts li a:hover small {
+  color: inherit;
+}
+
+
+/*
+ * Pagination
+ *
+ * Super lightweight (HTML-wise) blog pagination. `span`s are provide for when
+ * there are no more previous or next posts to show.
+ */
+
+.pagination {
+  overflow: hidden; /* clearfix */
+  margin-left: -20px;
+  margin-right: -20px;
+  color: #ccc;
+  text-align: center;
+}
+
+/* Pagination items can be `span`s or `a`s */
+.pagination-item {
+  display: block;
+  padding: 20px;
+  border: 1px solid #eee;
+}
+.pagination-item:first-child {
+  margin-bottom: -1px;
+}
+
+/* Only provide a hover state for linked pagination items */
+a.pagination-item:hover {
+  background-color: #f5f5f5;
+}
+
+@media (min-width: 30em) {
+  .pagination {
+    margin: 60px 0;
+  }
+  .pagination-item {
+    float: left;
+    width: 50%;
+  }
+  .pagination-item:first-child {
+    margin-bottom: 0;
+    border-top-left-radius:    4px;
+    border-bottom-left-radius: 4px;
+  }
+  .pagination-item:last-child {
+    margin-left: -1px;
+    border-top-right-radius:    4px;
+    border-bottom-right-radius: 4px;
+  }
+}
+
+#posts {
+  list-style:none;
+  line-height: 200%;
+  font-size: 20px;
+}
+
+.wow {
+  visibility: hidden;
+}
+
+#cta1 {
+  margin: 15px auto;
+  text-align: center;
+  border-radius: 15px;
+  padding: 10px;
+  width:250px;
+  font-size: 20px;
+  background-color: rgb(170, 218, 229);
+  color: black;
+  display: block;
+}
+.cta, .cta:hover, .cta:focus {
+  padding: 10px;
+  width: 100%;
+  background-color: #3DC442;
+  color: white;
+  display: block;
+  border-radius: 5px;
+  border: 1px solid #0EAA00;
+  border-bottom: 4px solid #0EAA00;
+}
+ .cta:hover, .cta:focus {
+  background-color: #2F9433;
+  border: 1px solid #0EAA00;
+  border-top: 4px solid #0EAA00;
+}
+#main {
+  padding: 0 5px;
+}
+ul.big li {
+  padding-bottom: 10px;
+  list-style:none;
+  padding-left: 60px;
+  margin-left: -40px;
+}
+li.data {background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACgAAAAgCAYAAABgrToAAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAb1JREFUeNrsWO1twjAQraMMwAjpBA0bwAQNE5BOQPhfKVTq/7YTNEwAnSDpBKUbZAQ2aN/RF+ma8mFoAv4RSyfHQT4/3zubdzFXjrbZw2OI7sN3EFiCbgK7k7HvELAeuidYrN97joAbCJ2wCPasf/MdilpBWgNYclGAABYwzwTYWoDN0vtM/Xb+CHJhoXLMvoS9CKUAt941z2+YrlC9qsY37ANGawkbAdTSxq9fu3cWdNRUKwhqLs8AVRzrQEdwwbDL7lYK+BfG5lIHyRMAfJbITTU4F9qve9A1cM5c1B3ADmAHsAPYAbT9J/kRDG4BVEJAhEJ6CGRdULbdzBnklmz8E7aykVusT3LYUHpjMUHUzrByzvEfwckN9tSrgLZNsL7tEqx1gDaKuuQChYrKhAtZKyGmhlRtt8IUxpXkz/ZJfs+SprEaT6WmwAI5LLLNSYAoYVJ/SGSu6TeVchM+4oM5aJMTiuaQ5eKAi5+kuLm5dEvZaZ+DdJRzYn8fHf8s3F+Zwxnr4g1A24t6xMl5G3clmekzr5OjKK7RseCBkV2+8wBJbpUNfzxKGZTcnOAg5kmMVARMC7RvPr99CzAAJLO1kgC6+UwAAAAASUVORK5CYII=) left 8px no-repeat;}
+li.analytics {background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACoAAAAgCAYAAABkWOo9AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAgBJREFUeNrMVzFOw0AQtMM9gJIydJThB5iKDvwCkhcE90i2JXpCB5XhBUlHR/wD8oOkpfMT2A1jyVh3sc9ew520cmRf9vZmZ2fvfM+xkaQPx/RYkl3gVU4Wjjz3BgfJwYawfeDKwUAZyTCJ71dAeB+8i4hqh+8gR9dId4pXMVnhIqJvZBNwla1gKvgOVvyW7JU4GlW/uYboI55p/YNyCE2u9ikqvqh/dwnRjMW9lKXOiJo6hm73HdBMUOkz0xwbRLUdQyDIMSToiTa9M82z4ai2YwilfEN+k0OT1D8X0BQABE1zj1rDGVyywyt6fpGdIV0n9NvP84+8o2a+kz0Tmi9N8204qusYrHdzWnQLeRHRzM69Hrv/BJdCTTFkSOGCF25SAmxqXeW8FKKxST64UskCKAFzjtG9aVFAq7ZBtgqUFuV03zUhhUVPOQCmBv1vCbRNmhmJHvPIMae8AGo27TCrHNeuK42CR0T+FjaBjlp0jMmhjmFAl1XgnEUcRVNtFBsE7okEirTNkfKdtfz80KREjX2UnExr6PZGNEPKk4HEftybo6ha1soAaRS/WthwXosoNDPDKTsXAC9Ec/h1tbB1ogya6dnKRwNXg75+lOacyWMmcc6UHCPNOZPl49a1q6ka8JwpjqiIfPwFolzZMZAsiynvIvJDIyoiH0OPbwEGAAu60udXqW5vAAAAAElFTkSuQmCC) left 8px no-repeat;}
+li.ads {background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB8AAAAgCAYAAADqgqNBAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAVBJREFUeNrsluFtgzAQhTHKAB0hI7QTNN0g3QA2aP5HIkj5n2yAN2g3gA3IBmWT5p36kKwkNoZSLCQsnU5IcN+7w/adOuTHn2hZU68QZQdzLdw4SMLZvhEfh6z6auxywn1bslX/C/8tpzLEJHDFnzNHoBPcBywFRHu834JTm4DYI8gT7JNggRYM7AV2CY09/mEJ28BeEChtM7EJ8AU74QjyDFfzUcAX/ldtE9AHbIUziIAr2Ft7Lo2NdSfABX60010bToKc8dHOsbM1gBEFvMInvhk74TalLgF9waOccwL1kG+DXq8LPBycF8qUw8Sm3e1yc9U8MlOuyzJHDh4CZzv5zvOc37TSQUsNhGawNfu9nFnp93nfrqZ6XgwFoZqwhqNWxn7esLVWo8AJzZjhF2x3O9kY855MuFtWJO8S4dPPS2Ocqjpm9ndDbNmV3FWAAQAZRKgq9fHkbAAAAABJRU5ErkJggg==) left 8px no-repeat;  padding-left: 52px;
+  margin-left: -52px;}
+li.search {background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAiBJREFUeNrEltFxgkAQhg+0AErADuxATQNKB1CB4T0zwEzeiRVIB0IDGezADiQdkA6yO/nJ7DBg7hDxZnZAvL39+O92l7nqGXHy7tNlS7br+DsnK+LoLVN3DqsjMAdMyVwyDnAmq8QUfr4i8/E8JJB8FAAKzoFf8Ya8cHVDIRegDPxBc8O7AETwgKWl3w7dRwjgCp8KgAnNq7FVx6EQlpD9JILvsGhNdiC7CJ8l2Z7MwfxcQHim2zHHld8+F8FP2H/ehrrlU9KcDD4nuvfgt23WMVJA0C/wxlfABP85k+8RW7SAItdGRV0AG6mW4cBFgNDdyxDzI/hnWE+ZAOyQagr3hw7ZuxX4nXcQteLcUzduAiiR527rwOmMi8iSyjQL7FZeK0g62bCFnA298wwAKeHScI1lawuNAXLU9qbJ7FEFlUYaOihKTe6vTOsAAxTcWHAGEmxBqumfYn4Cfx/r6QOgaLCEKdIqANCxTwl+jiLko/DUgKlMW/RcFBQuqz7KqofquKb7phfUeFvZCzzRCzj/vWd2Qy7fwwHu/B7IcQ1Mt2C0LyL5XUD2rXserDG/CYWCJZ8fNLlgEMCQQQAxq0NBN0KRmxD2yJW1Qub4UOcvpfscZmNGL8vPy3rzwmckpusXQ/AVv136v3goACAKE4jRAUwhHgJgAvEwAF0IS00wWo0rk0VrNgVAjxJcLeNJFOhQIkQ3jSYFaJVrHsmPAAMATcxbQ3VyqMQAAAAASUVORK5CYII=) left 8px no-repeat;}
+li.fast {background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACoAAAAgCAYAAABkWOo9AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAmlJREFUeNrMWNFxgkAQBcYCSAexgtiBUoGkgkAFWoAzyEz+1QowFQQrkFSgqSB0EDowu/ouczoQ746TuDM7NyJw797uvr2j51iwefr6RcNjzV8leUG+mSezvM0cPceOrcj3NddH5E/k77QYBp0S4LXJBK7TgRFIZjsiT8DwMwGuOgFKk4+OYzIrNJ4Z0JDhZ6AD1tUEN6VhUpOPDHalkof0Dp+GrS5YTxGgT75D6BhMQP5A3ucwomg4D7Or7zoBC7DYhVVGAdJBbpUN94QIa073xIqpswWrRWtG6YURVt8IEkwx0wwwEvl7hdkCKZPYCv0ELJUKk+eYfKIY0ZQlDKrQGihX6kZTU0OllDqxWkK6zIGiQtl0NK/SVDqOwtBO1WtoZUOH+ss+EbUWjGp2D8NnOPS+FD21Xi+1u7FYKV07AMQtW+439gM5mkfZyCikiDXzBdUbQOfcG4IUqRJIhbhDF6wtnAUzRz63sAk5tLmfMQBLdsYougqvICbm5k7HdhktYBDN4yhdHpKYkS9N94o3As9YlrwfYIyeJM6pc38mMEUeqjs3kaIOWK2gAmPB6EebwrlWgKI4DKfg9j3yJNE1NU76pGkviusJ7jOxSrmFKiS9qNCsBmQENWlVqJ7FCmWwoQCLMbQBUgbqWwIbSCoSoqu1BfkogOaofBvM7gF2DZB7C6/lLWDuQvn5kNW/N4nCBom/wsQeQlOpnl06NiawZIyeJDFT0VfvhM3fYjw7LgNkhv6a/lcaSHuPM8Vwa/aj4qPAWhzqNI8iJsAGUJ6hdNCL5S8vbsODU3mH36GxSrwxSZcR/RFgAHEEHg07qrvTAAAAAElFTkSuQmCC) left 8px no-repeat;}
+li.one {background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAK9JREFUeNpibGhsOc/AwGDAQBtwoaG+xhCfAhao5YZAhReoaTPQYw5Aaj8xCv/TyPdEmc3EMMBg1AED7gCaJsIhEQIsVAxJcgq0CyxUslyB1AINXlBRKw2QYw5Iz2g2HHXAqANGHTDqgFEHjDpg6LSIgHW3AJC6D2bX1whSS88QCoH6mg9ASpAUw4nRwwQNKqr0jkkxB9omBIcAqBF5HihAnqX1NYywFi4Z5lwACDAAcjc+csZJ8ksAAAAASUVORK5CYII=) left 8px no-repeat;}
+li.goal {background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACoAAAAgCAYAAABkWOo9AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAA51JREFUeNrcWNFt2zAQlQ0P4A0qTxBpgkYT2J7A0gSx/gvEBvIvdwIpE8iZQOoEUTbgCNqgvUveGS+EnchJijQlQOTokMfHu3d3pCbBwLbZ3kTyZyH9u/TLE9Na6b+k7zfXP7rgA9toAEAFdy1dgToFIf0BMrdQ+gUOo7IC3Qrg/V8FKgB1sxLWq6TfyqbtQOvrmpX0FFbOZK37cKCwYgmr5UMBngBcwMLZe6w7OqI8BcgKIHvvAHNYOfSWOljvjgHJminApgBbvRsogNQKUhRmnmVKgHsEAw5yi+gQDqBa0lEC7PItlh15nLxHxDJItcYaQZS/xjXoKRBUO5mfe2D19/hczo5JPnDyiBXUOsshynWOztU1uhY6rOXYo3yTRcnlibkLlkzxW+dxeHUkl7bIDJWXextQKScaNedSwICqyztzOSk7kB8urcHFCjy1QJuCnym4e7A+BScbQceRjOOhQCc4dcQuh+K9B/IebotPVJ29zPuJtfcix6BBJfIcv88w9xa0iIZWsDHI7ei0VlkYeA2QyUuK8b8Ec2uPmyF0B9jLYe9hFkXtZq7o6VvPdREs2dNhCsqlVhjUC738P4NV00eLqmW3Ny1021577D046i9Ru61dgn/WVgiGzgs8s14CuSaLdeDxivTceQH4wOPHQ21vfkNek7xReUIW4ctF5wFf0rgAf/m3VpTV9j8Cxu7vvGrmjhSUiry1gzf1QrSbvJK8pxB7GofIkZyCprjeLbCpHTigcXRizPeKO8gd9FlQ55OBFOmPjSkbcGvOHNeU4mo6RE2B+KwyHYvi/pl1nsYO7ggQcDHx1BFvt1hr4/zEeImDO5I7kgsG6nMn8irO3Es16uIablRLXFku1tSD9PMN2aOly4mjsYLoUZ2WwDAHrSJkBNurGAPIxQvADskZVjTFVh4byIeSiLkp1j5LezS+sKAF8Ke7wZMOBbhGwVHPrMcWBH4aAf8CTFaFpQUX8uVM+gh9RiCnFhBeZfPT3gJ7B7TPDPKO5I3KY6ST0KIRGzrjBvFIN2vMsi88ABvM9VOao8PYxXvv37xOyRNNzrKwQ3I212QAxZUlRiRqxeFLSU/8sktJ7FW2BQLI2hX4O/il+pnXvOSctxjf8BtEcEI13W7k+blvHRyo4BcD+Nsg2pO33vAzuLAgbmSo2SXSUTgAYIhyWvpvL36R/v+Puy/1XP5SHyC+1CedMz+S9cgWn/OR7F/77PhHgAEA2iCDMLo2bd0AAAAASUVORK5CYII=) left 8px no-repeat;}
+li.up {background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABsAAAAgCAYAAADjaQM7AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAcBJREFUeNrsV9FxgkAQRYYCKIFUEK0gUkGwgmgH+u+MMpN/TQVABaEDSAVSAh0kHSRvM+8iOQGZ5M4f3ZmdQ27nvd1j7+45cjpsGz/7GKbwB/iYz8f5zXqEmHc8SlxFf4PnmPtow/RaSAIMG3hEoJIgL3AFUnCcwAMmcg9PxIGRYsxAWjaxR1olO/gcXsPjriwR+ymVdayGJPnEBHL4CrH1DxmCImblcDJ1eqyLTIuZEtNXmC5eSiWvXK67c0RDjUs4YXWytHOP7CkmF45h4ydYgEi+eeLypXEijfR7tVzngnYju5FdMxlPenubmviqssByUcEll9FXZJV+C1swuekrRfZomUzwSyHLhNlWk/ASlcoyl5dcTd1hwwS3BE+lGmQl2gNZjA1XFbEf4uM+26xzyoKEosUEkU8VkCuV1Wz9GffDzhBRQem3ODmuqBdCkWIITgwQSeKzphR0Na1QMZM/EWpEIfG6D2J+P1XhYeiWYHMdeFqcEHUeVwwM+VMIl2eItiSSLTRpI/olv3uApGGW7NZYOkspYk31ytz+X/cZAFZUtg6Vs0qi4PdR1ezPYXkDRWZzWZsW6v9U+uxLgAEAgt/BOX9gvggAAAAASUVORK5CYII=) left 8px no-repeat;}
+.quote {
+  width: 100%;
+  background:url(../bg.jpg) black center/ cover;
+  color: white;
+  padding:50px;
+  font-size: 24px;
+  text-shadow: 0px 0px 10px black;
+  font-weight: 200;
+}
+aside .border{
+  max-width: 600px;
+  margin: auto;
+}
+.by {
+  text-align: right;
+  display: block;
+  font-weight: 400;
+}
+input, textarea {
+  padding: .5em .6em;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 16px;
+  width: 256px;
+  margin: 5px 0;
+}
+textarea {
+  width: 100%;
+}
+form {
+  max-width: 576px;
+  padding: 5px;
+}
+button {
+  font-size: 20px;
+}
+#go {
+  margin-bottom: 00px;
+}

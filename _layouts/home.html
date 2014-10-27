@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  {% include head.html %}
+
+  <body>
+    <header>
+      <a href="{{ site.baseurl }}">
+        <h3 class="wow fadeInDown" data-wow-duration="1s" id="title"><span id="centerfix">Ryan Slama</span><br> Web Design</h3>
+        <h2 class="wow fadeInUp" data-wow-delay=".4s" data-wow-duration="1.5s" id="subtitle">Performance Driven&nbsp;Websites</h2>
+      </a>
+    </header>
+    <div class="container content">
+
+      <main class="wow fadeIn" data-wow-delay=".5s">
+        {{ content }}
+      </main>
+
+      <footer class="footer">
+        <small>
+          &copy; <time datetime="{{ site.time | date_to_xmlschema }}">{{ site.time | date: '%Y' }}</time>. All rights reserved.
+        </small>
+      </footer>
+    </div>
+
+  </body>
+</html>
