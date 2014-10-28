@@ -9,7 +9,7 @@ relative_permalinks: true
 # Setup
 title:            Ryan Slama Web Design
 tagline:          
-url:              http://getpoole.com
+url:              http://ryanslama.com
 baseurl:          /
 author:
   name:           Ryan Slama
@@ -19,3 +19,6 @@ author:
 # Custom vars
 version:          0.0.1
 
+#gems
+gems:
+  - jekyll-sitemap
