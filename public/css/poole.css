@@ -516,12 +516,21 @@ button {
 #go {
   margin-bottom: 00px;
 }
-@media only screen and (max-device-width : 520px){
+@media (max-width: 520px) {
   #title {
     font-size: 42px;
   }
   #cta1 {
     font-size: 24px;
+  }
+  #main {
+    font-size: 32px;
+  }
+  h2 {
+    font-size: 26px;
+  }
+  .quote {
+    padding: 10px;
   }
 }
  
