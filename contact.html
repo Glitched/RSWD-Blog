@@ -1,16 +1,20 @@
 ---
-layout: default
+layout: noindex
 title: Let's Chat!
 ---
-<!-- Basic Pitch -->
 <h1 id="main">Let's Chat</h1> 
 
-<form action="">
-<label for="name">Full Name</label><br>
-<input type="text"><br>
-<label for="mail">Email Address</label><br>
-<input type="email"><br>
-<label for="msg">Message</label>
-<textarea name="" id="" cols="50" rows="10"></textarea>
-<button class="cta" id="go">Let's Go!</button>
+<!-- Form -->
+<form accept-charset="UTF-8" action="//forms.brace.io/theryanslama@gmail.com" method="POST">
+	<label for="name">Full Name</label><br>
+	<input type="text" name="name"><br>
+
+	<label for="mail">Email Address</label><br>
+	<input type="email" name="_replyto"><br>
+
+	<label for="msg">Message</label>
+	<textarea name="message" id="" cols="50" rows="10"></textarea>
+
+	<input type="hidden" name="_next" value="http://ryanslama.com/thanks.html" />
+	<button class="cta" id="go">Let's Go!</button>
 </form>

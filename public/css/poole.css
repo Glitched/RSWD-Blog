@@ -533,6 +533,11 @@ button {
     padding: 10px;
   }
 }
- 
+ .wide {
+  text-align: center;
+  max-width: 400px;
+  margin: auto;
+  margin-bottom: 10px;
+ }
 {% include animate.min.css %}
 {% include syntax.css %}
