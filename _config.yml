@@ -9,7 +9,7 @@ relative_permalinks: true
 # Setup
 title:            Ryan Slama Web Design
 tagline:          
-url:              http://ryanslama.com
+url:              http://www.ryanslama.com
 baseurl:          /
 author:
   name:           Ryan Slama
