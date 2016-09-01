@@ -7,8 +7,8 @@ Today marks the beginning of my official blog. I'll be covering both the latest 
 
 I am excited to start my blog, and will start rolling with the posts fairly quickly.
 
-##Behind the Scenes
+## Behind the Scenes
 My blog is powered by [Jekyll](http://jekyllrb.com) and a custom built theme using Poole by Mark Otto as a base. Although it is not as powerful as Wordpress, I really like Jekyll because it gives complete power over the final result and all of the page processing is done ahead of time, meaning Jekyll sites will tend to load more quickly than Wordpress sites.
 
-I use Animate.CSS and WOW.JS for the fancy transitions, and have no plans to change that. At the moment, I am using HTML 5 and CSS 3, but I'd like to transition the site over to Sass fairly soon. Sass 
+I use Animate.CSS and WOW.JS for the fancy transitions, and have no plans to change that. At the moment, I am using HTML 5 and CSS 3, but I'd like to transition the site over to Sass fairly soon. 
 

@@ -5,10 +5,10 @@ title: The Ultimate Domain Name Guide
 
 Domains can seem difficult, but are simple once you break it down. First things first, domains have two parts to them. The first is called a second level domain or a root domain and it is everything that comes before the dot such as **ryanslama**.com. The second part is the ending such as .com, .net, .org, and .edu. Recently, many new generic TLD's (gTLD) have become available, which you can see at [Name.com](http://www.name.com/new-gtld).
 
-##Choosing a TLD
+## Choosing a TLD
 I recommend a .com or .org domain for most sites because people are familiar with them. I tend not to go with gTLD's because some users may not understand that [learncode.academy](http://learncode.academy/){:rel="nofollow"} is a real site. Additionally, search engines may view an uncommon TLD as an indication that your website is spam.
 
-##Choosing a Root Domain
+## Choosing a Root Domain
 Next, it is time to choose a root domain. Here are the main points to keep in mind:
 
 + Use the name of your brand
@@ -29,7 +29,7 @@ The truth about Exact Match Domains (EMD's) is that they have not been relevant 
 
 Now, EMD's can even make it more difficult to rank as keyword stuffing becomes more of a problem. [Bing's Webmaster Blog](http://blogs.bing.com/webmaster/2014/09/09/url-keyword-stuffing-spam-filtering/) says that they straight up penalize obvious EMD's.
 
-##The Registration Process
+## The Registration Process
 
 It's not hard to register your domain, provided you know where to go. Whatever you do, DO NOT use Godaddy to register your domain. They charge well over the competition and have regular problems with their service. A quick search online will reveal too many people who have been burned by them. 
 
