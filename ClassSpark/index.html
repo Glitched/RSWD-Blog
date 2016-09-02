@@ -1,0 +1,275 @@
+<!doctype html>
+<html class="no-js" lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ClassSpark</title>
+    <link rel="stylesheet" href="assets/css/app.css">
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,600' rel='stylesheet' type='text/css'>
+  </head>
+  <body>
+
+    <style>
+      header {
+        width: 100%;
+        height: 400px;
+        background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIHZpZXdCb3g9IjAgMCAxIDEiIHByZXNlcnZlQXNwZWN0UmF0aW89Im5vbmUiPjxyYWRpYWxHcmFkaWVudCBpZD0iZzQ3OSIgZ3JhZGllbnRVbml0cz0idXNlclNwYWNlT25Vc2UiIGN4PSIzNSUiIGN5PSIzMCUiIHI9IjEwOCUiPjxzdG9wIHN0b3AtY29sb3I9IiMwMEEyQjYiIG9mZnNldD0iMCIvPjxzdG9wIHN0b3AtY29sb3I9IiMwMDAwMDAiIG9mZnNldD0iMSIvPjwvcmFkaWFsR3JhZGllbnQ+PHJlY3QgeD0iLTUwIiB5PSItNTAiIHdpZHRoPSIxMDEiIGhlaWdodD0iMTAxIiBmaWxsPSJ1cmwoI2c0NzkpIiAvPjwvc3ZnPg==);
+        overflow: hidden;
+        background-size: 100% 100%;
+      }
+      nav a {
+        color: rgba(255,255,255,.8);
+        text-decoration: none;
+      }
+      nav a:hover{
+        color: white;
+      }
+      nav li {
+        list-style: none;
+        float: right;
+        padding-right: 20px;
+      }
+      h1 {
+        padding-top: 30px;
+        float: right;
+        display: block;
+        margin: auto;
+        margin-right: 60px;
+      }
+      h2 {
+        font-family: "Open Sans", Helvetica, Arial, Sans-Serif;
+        font-weight: 600;
+        font-size: 28px;
+        color: white;
+        line-height: 39px;
+        text-shadow: 1px 1px 2px rgba(0,0,0,0.50);
+        margin: 0;
+      }
+      h3 {
+        color: #333;
+        font-family: "Open Sans", Helvetica, Arial, Sans-Serif;
+        font-weight: 600;
+        font-size: 24px;
+        line-height: 33px;
+        text-align: center;
+        vertical-align: middle;
+        display: table-cell;
+        height:66px;
+      }
+      header p {
+        font-family: "Open Sans", Helvetica, Arial, Sans-Serif;
+        font-size: 18px;
+        color: white;
+        line-height: 31px;
+        text-shadow: 0px 1px 2px rgba(0,0,0,0.50);
+      }
+      .wrap {
+        margin: auto;
+        max-width: 640px;
+        padding: 10px;
+        padding-top: 42px;
+      }
+      img.hero {
+        float: left;
+        margin-right: 50px;
+      }
+      footer {
+        height: 40px;
+        margin-top: -40px;
+        width: 100%;
+        background-color: #eee;
+        display: table; 
+      }
+      footer span {
+        vertical-align: middle; 
+        display: table-cell; 
+        padding-left: 10px;
+      }
+      section {
+        text-align: center;
+        color: #333;
+        margin-top: 20px;
+      }
+      section p {
+        font-family: "Open Sans", Helvetica, Arial, Sans-Serif;
+        font-size: 16px;
+        line-height: 22px;
+        text-align: center;
+        margin: auto;
+        max-width: 400px;
+        padding-bottom: 20px;
+        min-height: 110px;
+      }
+      section a {
+        padding: 8px;
+        border: 1px solid #333;
+        border-radius: 3px;
+        color: #333;
+        text-decoration: none;
+      }
+      section a:hover {
+        background-color: #333;
+        color: white;
+        transition: all 0.2s ease;
+      }
+      .blockimg {
+        height: 90px;
+      }
+      .blockimg:first{
+        padding-top: 5px;
+      }
+      .blocktext {
+        display: table;
+        text-align: center;
+        width: 100%;
+      }
+      .email {
+        background-color: #00BCD4;
+        background-image: linear-gradient(-180deg, #00BCD4 0%, #01A2B7 100%);
+        border-radius: 8px;
+        display: block;
+        max-width: 400px;
+        width: 80%;
+        margin: 30px auto;
+        padding: 8px;
+        margin-bottom: 80px;
+      }
+      .cta, .email a {
+        color: white;
+        text-align: center;
+        width: 100%;
+        display: block;
+        font-size: 20px;
+      }
+      .email input {
+        color: #333;
+        margin: 5px 0;
+      }
+      html, body, .content {
+        height: 100%;
+      }
+      body > .content { 
+        height: auto; 
+        min-height: 100%; 
+      }
+      .copyright, .credit {
+        color: #333;
+      }
+      .credit {
+        margin-left: auto;
+        margin-right: 20px;
+      }
+      @media (max-width:640px) {
+        header{
+          height: 460px;
+        }
+        img.hero {
+          float: none;
+          display: block;
+          margin: auto;
+          clear: both;
+          margin-bottom: -50px;
+        }
+        h1 {
+          float: left;
+          margin: 0;
+          padding: 0;
+          max-width: 70%;
+        }
+        h1 img {
+          display: block;
+          float: left;
+          max-width: 70%;
+        }
+        h2 {
+          text-align: center;
+          font-size: 26px;
+        }
+        .wrap p {
+          text-align: center;
+          max-width: 400px;
+          margin: auto;
+        }
+        .wrap {
+          padding-top: 0;
+        }
+      }
+      </style>
+      <div class="content">
+      <header>
+        <nav>
+          <ul>
+            <li><a href="login.html">Log In</a></li>
+          </ul>
+        </nav>
+        <div class="wrap">
+          <h1><img src="assets/img/ClassSpark.png" class="wow fadeIn"  alt="ClassSpark" width="263px"></h1>
+          <img class="hero wow fadeIn" src="assets/img/Device3.png" data-wow-duration=".5s" alt="iPhone 6 Screenshot" width="240px">
+          <h2 class="wow fadeIn" data-wow-duration="1.5s">Learning, Simplified</h2>
+          <p class="wow fadeIn" data-wow-duration="1.5s">The easiest way for teachers and students to collaborate and share resources&nbsp;digitally.</p>
+        </div>
+      </header>
+      <div class="row wow zoomIn" data-wow-duration="1s" data-wow-delay=".4s">
+        <section class="medium-4 columns">
+          <div class="blocktext"><h3>Easier for Students</h3></div>
+          <div class="blockimg">
+            <svg width="100px" height="70px" viewBox="0 0 100 70" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+                    <g id="iPad-Portrait" sketch:type="MSArtboardGroup" transform="translate(-78.000000, -618.000000)" fill="#353535">
+                        <g id="Icon" sketch:type="MSLayerGroup" transform="translate(78.000000, 618.000000)">
+                            <path d="M74.1794899,35.0549979 L56.6698486,26.9037644 C56.7249521,25.0435117 55.7718659,23.2220356 54.0207998,22.2822151 C53.2605758,21.8720003 52.4381053,21.6770972 51.6309414,21.6770972 C49.8237513,21.6770972 48.0737055,22.6475307 47.1604164,24.3506365 C45.8369124,26.8149866 46.7644876,29.8875159 49.2288378,31.2110199 C49.9829391,31.6140916 50.7931644,31.8059334 51.5921649,31.8059334 C52.646274,31.8059334 53.680995,31.4742921 54.5453033,30.8610107 L70.8712402,38.3775337 L70.8712402,43.2348036 L70.8712402,67.4782944 C70.8712402,68.7181227 71.8763685,69.7242715 73.1172173,69.7242715 C74.358066,69.7242715 75.3621739,68.7181227 75.3621739,67.4782944 L75.3621739,40.8378021 L75.3621739,37.0326006 C75.3621739,36.8530041 75.3356426,36.6795302 75.2917639,36.5121789 C75.1458417,35.8978771 74.7529743,35.3601079 74.1794899,35.0549979 L74.1794899,35.0549979 Z" id="Shape" sketch:type="MSShapeGroup"></path>
+                            <path d="M96.8311024,21.5056642 L51.8391101,0.469400024 C51.2564418,0.196943923 50.6288744,0.0612260901 50.0013069,0.0612260901 C49.3737395,0.0612260901 48.7461721,0.197964358 48.1635038,0.470420459 L3.17355234,21.5056642 C1.68575835,22.2005803 0.718386124,23.6781699 0.673486992,25.3200496 C0.630628728,26.9619292 1.5173866,28.4874793 2.96640407,29.2619893 L18.485177,37.5509815 L18.485177,49.0431186 L50.0013069,65.5833469 L67.6191144,56.3739225 L67.6191144,44.9726041 L67.6191144,43.4501153 L67.6191144,40.4622821 L67.20992,40.2724812 L50.0013069,49.4655787 L5.01135548,25.4343383 L50.0013069,4.39909458 L94.9922789,25.4343383 L77.9948958,34.513147 C78.3918449,35.2784731 78.617361,36.1356384 78.617361,37.0326006 L78.617361,39.0969403 L78.687771,39.0591842 L78.687771,50.4319304 L84.8409931,47.2155198 L84.8409931,35.7754249 L97.0362098,29.2619893 C98.4852273,28.4874793 99.3730056,26.9629497 99.3281065,25.3200496 C99.2852482,23.6781699 98.3188964,22.1995599 96.8311024,21.5056642 L96.8311024,21.5056642 Z" id="Shape" sketch:type="MSShapeGroup"></path>
+                        </g>
+                    </g>
+                </g>
+            </svg>
+          </div>
+          <p>Keep students connected and organized, while promoting collaboration among students and teachers!</p>
+          <a href="students.html">Learn More</a>
+        </section>
+        <section class="medium-4 columns">
+          <div class="blocktext"><h3>Easier for Educators</h3></div>
+          <div class="blockimg">
+            <svg width="72px" height="80px" viewBox="0 0 72 80" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+                    <g id="iPad-Portrait" sketch:type="MSArtboardGroup" transform="translate(-348.000000, -611.000000)" fill="#333333">
+                        <path d="M386.383804,628.729806 C386.596081,626.254825 387.362678,623.461502 389.995512,621.721345 C390.435068,621.431869 388.943879,618.727616 388.679845,618.244331 C388.415812,617.761045 387.84799,617.605998 387.408434,617.895475 C385.317919,619.275229 384.331544,621.154764 383.708215,623.079657 C381.998748,616.23779 372.743325,611 362.241994,611 L362.241994,611.009897 C362.241994,611.009897 362.022216,611.004124 361.989212,611.012371 C361.73868,611.071751 361.470146,611.353804 361.557907,611.618539 C365.992469,625.02187 371.99323,624.197152 382.996375,625.937308 C382.861358,627.131501 382.835104,628.240748 382.841105,629.167732 C349.835421,616.800248 336.651,652.996335 359.316623,682.748068 C365.633174,691.040617 375.533679,693.428178 383.997752,688.328116 C392.464075,693.429003 402.36833,691.040617 408.684131,682.748068 C431.064718,653.366634 418.490124,617.703315 386.383804,628.729806 L386.383804,628.729806 Z M358.251488,647.28928 L358.228985,647.28928 C357.611657,651.412875 351.748914,652.343982 353.600898,645.975503 C354.788299,641.251513 359.676668,631.836523 370.427781,631.836523 C363.734683,634.655412 358.607783,642.340967 358.251488,647.28928 L358.251488,647.28928 Z" id="Shape" sketch:type="MSShapeGroup"></path>
+                    </g>
+                </g>
+            </svg>
+          </div>
+          <p>Empowers educators to assign cousework and share resources instantly. Keep students up to date with instant notifications!</p>
+          <a href="educators.html">Learn More</a>
+        </section>
+        <section class="medium-4 columns">
+          <div class="blocktext"><h3>Easier for Administrators</h3></div>
+          <div class="blockimg">
+            <svg width="76px" height="86px" viewBox="0 0 76 86" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+                    <g id="iPad-Portrait" sketch:type="MSArtboardGroup" transform="translate(-604.000000, -610.000000)" fill="#353535">
+                        <path d="M661.021,642.389852 C659.344,648.316852 657.819,648.642852 656.902,648.018852 C655.767,654.403852 652.333,662.629852 641.258,663.061852 C630.009,662.198852 626.446,653.776852 625.443,647.290852 C624.543,647.219852 623.355,645.952852 622.078,641.440852 C620.331,635.264852 622.186,634.353852 623.758,634.500852 C622.602,631.257852 622.579,628.065852 623.353,625.114852 C624.167,621.638852 626.045,618.854852 628.152,616.701852 C629.483,615.285852 630.991,614.046852 632.591,613.032852 C633.892,612.127852 635.332,611.353852 636.903,610.822852 L636.905,610.821852 L636.905,610.821852 C638.133,610.406852 639.441,610.139852 640.826,610.073852 C645.104,609.703852 648.344,610.774852 650.671,612.153852 C654.145,614.070852 655.464,616.608852 655.464,616.608852 C655.464,616.608852 664.207,617.222852 660.379,635.550852 L660.379,635.550852 C661.555,635.956852 662.384,637.571852 661.021,642.389852 L661.021,642.389852 Z M641.746,695.015852 C656.484,695.015852 669.828,689.049852 679.496,679.400852 C679.28,675.230852 677.869,669.935852 672.344,668.530852 C662.871,666.121852 655.174,660.702852 655.174,660.702852 L649.169,679.695852 L648.038,683.271852 L648.021,683.222852 L647.035,686.252852 L643.869,677.269852 C651.876,666.097852 641.748,666.531852 641.748,666.531852 C641.748,666.531852 631.619,666.095852 639.627,677.268852 L636.432,686.322852 L635.455,683.262852 L628.322,660.703852 C628.322,660.703852 620.625,666.122852 611.152,668.531852 C605.627,669.935852 604.216,675.230852 604,679.400852 C613.664,689.049852 627.008,695.015852 641.746,695.015852 L641.746,695.015852 Z" id="Shape" sketch:type="MSShapeGroup"></path>
+                    </g>
+                </g>
+            </svg>
+          </div>
+          <p>Seamless integration and managed servers make ClassSpark hassle free! No expensive servers, no time consuming maintainence, and no costly upkeep!</p>
+          <a href="administrators.html">Learn More</a>
+        </section>
+      </div>
+      <div class="email">
+        <span class="cta">Be the first to hear when&nbsp;it’s&nbsp;released!</span>
+        <input type="text" placeholder="JohnDoe@Gmail.com">
+        <a href="thankyou.html">Submit!</a>
+      </div>
+      </div>
+      <footer>
+        <span class="copyright">© 2015 ClassSpark, LLC.</span>
+        <span class="credit">Web Design & Development by Ryan Slama</span>
+      </footer>
+
+    <script src="assets/js/app.js"></script>
+    <script>new WOW().init();</script>
+
+  </body>
+</html>
